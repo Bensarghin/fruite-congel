@@ -21,15 +21,9 @@
       <!-- header & navbar -->
       <nav class="bg-[#f2f2f3] sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center h-20">
+          <div class="flex justify-between items-center h-32 relative">
             <!-- Left Menu Items -->
             <div class="hidden md:flex items-center space-x-8">
-              <a
-                href="#menu"
-                class="text-primary uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
-              >
-                Menu
-              </a>
               <a
                 href="#about"
                 class="text-primary uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
@@ -45,9 +39,11 @@
             </div>
 
             <!-- Center Logo -->
-            <div class="flex-shrink-0">
+            <div
+              class="flex-shrink-0 absolute left-1/2 transform -translate-x-1/2"
+            >
               <a href="#" class="flex items-center">
-                <img src="./img/logo.svg" alt="" class="h-36">
+                <img src="./img/logo.svg" alt="" class="h-42" />
               </a>
             </div>
 
@@ -60,7 +56,7 @@
                 Process
               </a>
               <a
-                href="#contact"
+                href="mailto:contact@fruitscongel.com"
                 class="text-primary uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
               >
                 Contact Us
@@ -68,7 +64,7 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <div class="md:hidden">
+            <div class="md:hidden ml-auto">
               <button
                 @click="toggleMobileMenu"
                 class="text-[#2cc0d6] uppercase font-semibold text-[28px] hover:text-blue-600 focus:outline-none"
@@ -166,30 +162,31 @@
       </nav>
       <!-- hero -->
       <div class="bg-[#efefe1]" id="hero-section">
-        <div class="grid lg:grid-cols-2">
-          <div></div>
-          <div
-            class="max-w-7xl font-medium uppercase mx-auto px-4 sm:px-6 lg:px-8 py-16"
-          >
-            <div class="text-center">
-              <p class="text-2xl text-primary">Special <br />Anuga 2025</p>
-              <h1 class="text-5xl font-medium text-primary mb-4">
+        <div class="flex justify-end me-16 p-32">
+          <div class="text-center font-medium inline-block uppercase">
+            <div class="mb-8">
+              <p class="text-3xl text-primary font-bold mb-5">
+                Special <br />Anuga 2025
+              </p>
+              <h1 class="text-7xl font-black text-primary mb-4">
                 das <br />dream<br />
                 team
               </h1>
-              <div class="mb-3">
-                <p class="text-xl text-primary">Visit us at</p>
-                <p class="text-3xl text-primary">
-                  HAll n° 4.1 <br />BOOTH C091
-                </p>
-              </div>
-              <div>
-                <p class="text-primary">04 - 08 Oct</p>
-                <p class="text-3xl text-primary">
-                  25 Koelnmesse <br />
-                  Cologne
-                </p>
-              </div>
+            </div>
+            <div class="mb-8">
+              <p class="text-2xl mb-3 text-primary font-bold">Visit us at</p>
+              <p class="text-5xl text-primary font-bold">
+                HAll n° 4.1 <br />BOOTH C091
+              </p>
+            </div>
+            <div>
+              <p class="text-primary mb-3 font-bold text-2xl">
+                04 - 08 <br />Oct 25
+              </p>
+              <p class="text-5xl text-primary font-bold">
+                Koelnmesse <br />
+                Cologne
+              </p>
             </div>
           </div>
         </div>
@@ -202,33 +199,32 @@
             <img src="./img/1.jpg" alt="Blueberry" />
           </div>
           <div class="bg-[#efefe1] order-first lg:order-last">
-            <div>
+            <div class="p-20 max-w-xl">
               <h2
-                class="content-title block text-center mt-14 me-0 float-right px-20 mb-14 ms-auto text-3xl text-primary"
+                class="content-title text-center me-0 float-right mb-32 text-4xl text-primary"
               >
-                Meet
+                Meet <br />
                 our stars
               </h2>
-            </div>
-
-            <div class="p-20 max-w-md">
-              <h3 class="fruit-name text-3xl text-bold mb-3 text-[#175b37]">
-                IQF Peper
+              <h3
+                class="fruit-name text-4xl mt-52 w-full text-bold mb-3 text-[#209746]"
+              >
+                IQF Peppers
               </h3>
               <p class="text-gray-800">
                 Available blanched or unblanched, come in Red, Green, Flamed,
                 Yellow, and Orange varieties, offered in all standard cuts
                 including strips and dices (6x6mm, 10x10mm, 20x20mm & more).
               </p>
-              <a href="#" class="primary-btn mt-32"> Get your quote </a>
+              <a href="#" class="primary-btn mt-16"> Get your quote </a>
             </div>
           </div>
         </div>
         <!-- IQF Raspberry -->
         <div class="grid lg:grid-cols-2">
           <div class="bg-[#efefe1]">
-            <div class="p-20 max-w-md">
-              <h3 class="fruit-name text-3xl text-bold mb-3 text-[#175b37]">
+            <div class="p-20 max-w-xl">
+              <h3 class="fruit-name text-4xl text-bold mb-3 text-[#d71f26]">
                 IQF Raspberry
               </h3>
               <p class="text-gray-800">
@@ -249,8 +245,8 @@
             <img src="./img/3.jpg" alt="Blueberry" />
           </div>
           <div class="bg-[#efefe1] order-first lg:order-last">
-            <div class="p-20 max-w-md">
-              <h3 class="fruit-name text-3xl text-bold mb-3 text-[#175b37]">
+            <div class="p-20 max-w-xl">
+              <h3 class="fruit-name text-4xl text-bold mb-3 text-[#295f7f]">
                 IQF Blueberry
               </h3>
               <p class="text-gray-800">
@@ -265,8 +261,8 @@
         <!-- IQF Blackberry -->
         <div class="grid lg:grid-cols-2">
           <div class="bg-[#efefe1]">
-            <div class="p-20 max-w-md">
-              <h3 class="fruit-name text-3xl text-bold mb-3 text-[#175b37]">
+            <div class="p-20 max-w-xl">
+              <h3 class="fruit-name text-4xl text-bold mb-3 text-[#220d40]">
                 IQF Blackberry
               </h3>
               <p class="text-gray-800">
@@ -286,8 +282,8 @@
             <img src="./img/5.jpg" alt="Blueberry" />
           </div>
           <div class="bg-[#efefe1] order-first lg:order-last">
-            <div class="p-20 max-w-md">
-              <h3 class="fruit-name text-3xl text-bold mb-3 text-[#175b37]">
+            <div class="p-20 max-w-xl">
+              <h3 class="fruit-name text-4xl text-bold mb-3 text-[#ef8322]">
                 IQF Mandarine
               </h3>
               <p class="text-gray-800">

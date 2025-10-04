@@ -9,14 +9,19 @@ body {
     font-weight: 200;
 }
 
-.content-title,
-.fruit-name {
-  font-family: "Caprasimo", serif;   
-}
+
 
 #hero-section {
+    font-family: "Caprasimo", serif;
     background-image: url('../img/hero-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 100% 100%;
+    background-position: center;
+    height: 100vh;
+}
+
+.content-title,
+.fruit-name {
+  font-family: "Caprasimo", serif;
+  font-weight: 600; 
 }
