@@ -6,6 +6,15 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./css/app.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #0a456b;
+      }
+
+      .primary-btn {
+        @apply bg-[#fed025] inline-block rounded-2xl font-semibold text-[14px] py-2.5 px-4;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
@@ -17,19 +26,19 @@
             <div class="hidden md:flex items-center space-x-8">
               <a
                 href="#menu"
-                class="text-[#0a456b] uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
+                class="text-primary uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
               >
                 Menu
               </a>
               <a
                 href="#about"
-                class="text-[#0a456b] uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
+                class="text-primary uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
               >
                 About Us
               </a>
               <a
                 href="#products"
-                class="text-[#0a456b] uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
+                class="text-primary uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
               >
                 Products
               </a>
@@ -56,13 +65,13 @@
             <div class="hidden md:flex items-center space-x-8">
               <a
                 href="#process"
-                class="text-[#0a456b] uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
+                class="text-primary uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
               >
                 Process
               </a>
               <a
                 href="#contact"
-                class="text-[#0a456b] uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
+                class="text-primary uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
               >
                 Contact Us
               </a>
@@ -106,7 +115,7 @@
             <div class="flex justify-end p-4">
               <button
                 @click="toggleMobileMenu"
-                class="text-[#0a456b] hover:text-blue-600 focus:outline-none"
+                class="text-primary hover:text-blue-600 focus:outline-none"
               >
                 <svg
                   class="h-8 w-8"
@@ -129,35 +138,35 @@
               <a
                 href="#menu"
                 @click="toggleMobileMenu"
-                class="block px-4 py-4 text-[#0a456b] uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
+                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
               >
                 Menu
               </a>
               <a
                 href="#about"
                 @click="toggleMobileMenu"
-                class="block px-4 py-4 text-[#0a456b] uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
+                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
               >
                 About Us
               </a>
               <a
                 href="#products"
                 @click="toggleMobileMenu"
-                class="block px-4 py-4 text-[#0a456b] uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
+                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
               >
                 Products
               </a>
               <a
                 href="#process"
                 @click="toggleMobileMenu"
-                class="block px-4 py-4 text-[#0a456b] uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
+                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
               >
                 Process
               </a>
               <a
                 href="#contact"
                 @click="toggleMobileMenu"
-                class="block px-4 py-4 text-[#0a456b] uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
+                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
               >
                 Contact Us
               </a>
@@ -173,20 +182,20 @@
             class="max-w-7xl font-medium uppercase mx-auto px-4 sm:px-6 lg:px-8 py-16"
           >
             <div class="text-center">
-              <p class="text-2xl text-[#0a456b]">Special <br />Anuga 2025</p>
-              <h1 class="text-5xl font-medium text-[#0a456b] mb-4">
+              <p class="text-2xl text-primary">Special <br />Anuga 2025</p>
+              <h1 class="text-5xl font-medium text-primary mb-4">
                 das <br />dream<br />
                 team
               </h1>
               <div class="mb-3">
-                <p class="text-xl text-[#0a456b]">Visit us at</p>
-                <p class="text-3xl text-[#0a456b]">
+                <p class="text-xl text-primary">Visit us at</p>
+                <p class="text-3xl text-primary">
                   HAll n° 4.1 <br />BOOTH C091
                 </p>
               </div>
               <div>
-                <p class="text-[#0a456b]">04 - 08 Oct</p>
-                <p class="text-3xl text-[#0a456b]">
+                <p class="text-primary">04 - 08 Oct</p>
+                <p class="text-3xl text-primary">
                   25 Koelnmesse <br />
                   Cologne
                 </p>
@@ -197,23 +206,31 @@
       </div>
       <!-- Content -->
       <main>
-        <!-- IQF Peper -->
+        <!-- IQF Peppers -->
         <div class="grid lg:grid-cols-2">
-          <div class="bg-[#0a456b]"></div>
-          <div class="bg-[#efefe1]">
+          <div class="">
+            <img src="./img/1.jpg" alt="Blueberry" />
+          </div>
+          <div class="bg-[#efefe1] order-first lg:order-last">
+            <div>
+              <h2
+                class="content-title block text-center mt-14 me-0 float-right px-20 mb-14 ms-auto text-3xl text-primary"
+              >
+                Meet
+                our stars
+              </h2>
+            </div>
+
             <div class="p-20 max-w-md">
-              <h1 class="text-3xl text-bold mb-3 text-[#175b37]">IQF Peper</h1>
+              <h3 class="fruit-name text-3xl text-bold mb-3 text-[#175b37]">
+                IQF Peper
+              </h3>
               <p class="text-gray-800">
                 Available blanched or unblanched, come in Red, Green, Flamed,
                 Yellow, and Orange varieties, offered in all standard cuts
                 including strips and dices (6x6mm, 10x10mm, 20x20mm & more).
               </p>
-              <a
-                href="#"
-                class="bg-[#fed025] inline-block rounded-2xl font-semibold text-[14px] mt-32 py-2.5 px-4"
-              >
-                Get your quote
-              </a>
+              <a href="#" class="primary-btn mt-32"> Get your quote </a>
             </div>
           </div>
         </div>
@@ -221,43 +238,37 @@
         <div class="grid lg:grid-cols-2">
           <div class="bg-[#efefe1]">
             <div class="p-20 max-w-md">
-              <h1 class="text-3xl text-bold mb-3 text-[#175b37]">
+              <h3 class="fruit-name text-3xl text-bold mb-3 text-[#175b37]">
                 IQF Raspberry
-              </h1>
+              </h3>
               <p class="text-gray-800">
                 Whole, Broken, or Crumble, come in vibrant varieties like
                 Adelita, Jasmin, Maravilla, and Magestic ; each selected for
                 flavor, color, and optimal freezing performance.
               </p>
-              <a
-                href="#"
-                class="bg-[#fed025] inline-block rounded-2xl font-semibold text-[14px] mt-32 py-2.5 px-4"
-              >
-                Get your quote
-              </a>
+              <a href="#" class="primary-btn mt-32"> Get your quote </a>
             </div>
           </div>
-          <div class="bg-[#0a456b]"></div>
+          <div class="">
+            <img src="./img/2.jpg" alt="Raspberry" />
+          </div>
         </div>
         <!-- IQF Blueberry -->
         <div class="grid lg:grid-cols-2">
-          <div class="bg-[#0a456b]"></div>
-          <div class="bg-[#efefe1]">
+          <div class="">
+            <img src="./img/3.jpg" alt="Blueberry" />
+          </div>
+          <div class="bg-[#efefe1] order-first lg:order-last">
             <div class="p-20 max-w-md">
-              <h1 class="text-3xl text-bold mb-3 text-[#175b37]">
+              <h3 class="fruit-name text-3xl text-bold mb-3 text-[#175b37]">
                 IQF Blueberry
-              </h1>
+              </h3>
               <p class="text-gray-800">
                 Available calibrated or uncalibrated, feature standout varieties
                 like Ventura, Corrina, Stella, Eureka Sunrise, Cielo, and
                 Masena, each chosen for quality and freezing performance.
               </p>
-              <a
-                href="#"
-                class="bg-[#fed025] inline-block rounded-2xl font-semibold text-[14px] mt-32 py-2.5 px-4"
-              >
-                Get your quote
-              </a>
+              <a href="#" class="primary-btn mt-32"> Get your quote </a>
             </div>
           </div>
         </div>
@@ -265,46 +276,41 @@
         <div class="grid lg:grid-cols-2">
           <div class="bg-[#efefe1]">
             <div class="p-20 max-w-md">
-              <h1 class="text-3xl text-bold mb-3 text-[#175b37]">
+              <h3 class="fruit-name text-3xl text-bold mb-3 text-[#175b37]">
                 IQF Blackberry
-              </h1>
+              </h3>
               <p class="text-gray-800">
                 Available as whole, handpicked, carefully sorted, then
                 individually frozen to preserve both freshness and flavor!
               </p>
-              <a
-                href="#"
-                class="bg-[#fed025] inline-block rounded-2xl font-semibold text-[14px] mt-32 py-2.5 px-4"
-              >
-                Get your quote
-              </a>
+              <a href="#" class="primary-btn mt-32"> Get your quote </a>
             </div>
           </div>
-          <div class="bg-[#0a456b]"></div>
+          <div class="">
+            <img src="./img/4.jpg" alt="Blueberry" />
+          </div>
         </div>
         <!-- IQF Mandarine -->
         <div class="grid lg:grid-cols-2">
-          <div class="bg-[#0a456b]"></div>
-          <div class="bg-[#efefe1]">
+          <div class="">
+            <img src="./img/5.jpg" alt="Blueberry" />
+          </div>
+          <div class="bg-[#efefe1] order-first lg:order-last">
             <div class="p-20 max-w-md">
-              <h1 class="text-3xl text-bold mb-3 text-[#175b37]">
+              <h3 class="fruit-name text-3xl text-bold mb-3 text-[#175b37]">
                 IQF Mandarine
-              </h1>
+              </h3>
               <p class="text-gray-800">
                 Available as segments, with a naturally thin skin, handpicked
                 and peeled then individually frozen to preserve their quality
                 and freshness!
               </p>
-              <a
-                href="#"
-                class="bg-[#fed025] inline-block rounded-2xl font-semibold text-[14px] mt-32 py-2.5 px-4"
-              >
-                Get your quote
-              </a>
+              <a href="#" class="primary-btn mt-32"> Get your quote </a>
             </div>
           </div>
         </div>
       </main>
+
       <!-- footer  -->
       <footer class="bg-[#f2f2f3] text-gray-800">
         <div class="flex flex-wrap justify-between gap-18 p-20">
