@@ -23,7 +23,7 @@ jobs:
           port: 21                     # change to 22 if SFTP
           protocol: ftp                 # change to 'sftp' if supported
           local-dir: ./                 # root of your repo
-          server-dir: /home/u629008760/domains/darkslategrey-goshawk-494819.hostingersite.com/public_html/     # change to your host’s web root
+          server-dir: /domains/darkslategrey-goshawk-494819.hostingersite.com/public_html/     # change to your host’s web root
           exclude: |
             **/.git*
             **/.github*
