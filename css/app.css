@@ -28,3 +28,9 @@ body {
   font-family: "Caprasimo", serif;
   font-weight: 600; 
 }
+
+@media screen and (max-width: 720px ) {
+    #hero-section {
+        background-image: none;
+    }
+}

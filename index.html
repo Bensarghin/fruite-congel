@@ -3,16 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fruits Congel Du Nord</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="/css/app.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <style type="text/tailwindcss">
       @theme {
         --color-primary: #0a456b;
+        --color-secondary: #2cc0d6;
       }
 
       .primary-btn {
-        @apply bg-[#fed025] inline-block rounded-2xl font-semibold text-[14px] py-2.5 px-4;
+        @apply bg-[#fed025] inline-block rounded-2xl font-semibold text-[14px] py-2.5 px-4 capitalize;
       }
     </style>
   </head>
@@ -26,13 +31,13 @@
             <div class="hidden md:flex items-center space-x-8">
               <a
                 href="#about"
-                class="text-primary uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
+                class="text-primary uppercase font-semibold text-[14px] hover:text-secondary transition-colors duration-300"
               >
                 About Us
               </a>
               <a
                 href="#products"
-                class="text-primary uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
+                class="text-primary uppercase font-semibold text-[14px] hover:text-secondary transition-colors duration-300"
               >
                 Products
               </a>
@@ -43,7 +48,7 @@
               class="flex-shrink-0 absolute left-1/2 transform -translate-x-1/2"
             >
               <a href="#" class="flex items-center">
-                <img src="./img/logo.svg" alt="" class="h-42" />
+                <img src="./img/logo.svg" alt="" class="h-52" />
               </a>
             </div>
 
@@ -51,13 +56,13 @@
             <div class="hidden md:flex items-center space-x-8">
               <a
                 href="#process"
-                class="text-primary uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
+                class="text-primary uppercase font-semibold text-[14px] hover:text-secondary transition-colors duration-300"
               >
                 Process
               </a>
               <a
                 href="mailto:contact@fruitscongel.com"
-                class="text-primary uppercase font-semibold text-[14px] hover:text-blue-600 transition-colors duration-300"
+                class="text-primary uppercase font-semibold text-[14px] hover:text-secondary transition-colors duration-300"
               >
                 Contact Us
               </a>
@@ -67,7 +72,7 @@
             <div class="md:hidden ml-auto">
               <button
                 @click="toggleMobileMenu"
-                class="text-[#2cc0d6] uppercase font-semibold text-[28px] hover:text-blue-600 focus:outline-none"
+                class="text-[#2cc0d6] uppercase font-semibold text-[28px] hover:text-secondary focus:outline-none"
               >
                 <svg
                   class="h-12 w-12"
@@ -101,7 +106,7 @@
             <div class="flex justify-end p-4">
               <button
                 @click="toggleMobileMenu"
-                class="text-primary hover:text-blue-600 focus:outline-none"
+                class="text-primary hover:text-secondary focus:outline-none"
               >
                 <svg
                   class="h-8 w-8"
@@ -124,35 +129,35 @@
               <a
                 href="#menu"
                 @click="toggleMobileMenu"
-                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
+                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-secondary rounded-md transition-colors duration-300 border-b border-gray-100"
               >
                 Menu
               </a>
               <a
                 href="#about"
                 @click="toggleMobileMenu"
-                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
+                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-secondary rounded-md transition-colors duration-300 border-b border-gray-100"
               >
                 About Us
               </a>
               <a
                 href="#products"
                 @click="toggleMobileMenu"
-                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
+                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-secondary rounded-md transition-colors duration-300 border-b border-gray-100"
               >
                 Products
               </a>
               <a
                 href="#process"
                 @click="toggleMobileMenu"
-                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
+                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-secondary rounded-md transition-colors duration-300 border-b border-gray-100"
               >
                 Process
               </a>
               <a
                 href="#contact"
                 @click="toggleMobileMenu"
-                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors duration-300 border-b border-gray-100"
+                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-secondary rounded-md transition-colors duration-300 border-b border-gray-100"
               >
                 Contact Us
               </a>
@@ -306,9 +311,9 @@
               for Exclusive Deals and Offers
             </h3>
             <a
-              class="bg-[#fed025] inline-block rounded-2xl font-semibold text-[14px] py-2.5 px-4"
+              class="primary-btn"
               href=""
-              >sign up now</a
+              >Sign up now</a
             >
           </div>
           <div>
@@ -316,9 +321,9 @@
               Terms & Conditions <br />Supply Chain Traceability
             </h3>
             <a
-              class="bg-[#fed025] inline-block rounded-2xl font-semibold text-[14px] py-2.5 px-4"
+              class="primary-btn"
               href=""
-              >get your quote</a
+              >Get your quote</a
             >
           </div>
           <div>
