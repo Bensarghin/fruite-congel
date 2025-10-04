@@ -12,12 +12,15 @@ body {
 
 
 #hero-section {
-    font-family: "Caprasimo", serif;
-    background-image: url('../img/hero-bg.jpg');
+    background-image: url('/img/hero-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
+}
+
+#hero-section .hero-title {
+    font-family: "Caprasimo", serif;
 }
 
 .content-title,
