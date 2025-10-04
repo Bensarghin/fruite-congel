@@ -36,7 +36,7 @@
                 About Us
               </a>
               <a
-                href="#products"
+                href="#content"
                 class="text-primary uppercase font-semibold text-[14px] hover:text-secondary transition-colors duration-300"
               >
                 Products
@@ -127,13 +127,6 @@
             <!-- Menu Items -->
             <div class="px-6 pt-8 space-y-4">
               <a
-                href="#menu"
-                @click="toggleMobileMenu"
-                class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-secondary rounded-md transition-colors duration-300 border-b border-gray-100"
-              >
-                Menu
-              </a>
-              <a
                 href="#about"
                 @click="toggleMobileMenu"
                 class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-secondary rounded-md transition-colors duration-300 border-b border-gray-100"
@@ -141,22 +134,21 @@
                 About Us
               </a>
               <a
-                href="#products"
+                href="#content"
                 @click="toggleMobileMenu"
                 class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-secondary rounded-md transition-colors duration-300 border-b border-gray-100"
               >
                 Products
               </a>
               <a
-                href="#process"
+                href="#content"
                 @click="toggleMobileMenu"
                 class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-secondary rounded-md transition-colors duration-300 border-b border-gray-100"
               >
                 Process
               </a>
               <a
-                href="#contact"
-                @click="toggleMobileMenu"
+                href="mailto:contact@fruitscongel.com"
                 class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-secondary rounded-md transition-colors duration-300 border-b border-gray-100"
               >
                 Contact Us
@@ -197,14 +189,14 @@
         </div>
       </div>
       <!-- Content -->
-      <main>
+      <main id="content">
         <!-- IQF Peppers -->
         <div class="grid lg:grid-cols-2">
           <div class="">
             <img src="./img/1.jpg" alt="Blueberry" />
           </div>
           <div class="bg-[#efefe1] order-first lg:order-last">
-            <div class="p-20 max-w-xl">
+            <div class="p-20 max-w-xl mt-42">
               <h2
                 class="content-title text-center me-0 float-right mb-32 text-4xl text-primary"
               >
@@ -303,7 +295,7 @@
       </main>
 
       <!-- footer  -->
-      <footer class="bg-[#f2f2f3] text-gray-800">
+      <footer class="bg-[#f2f2f3] text-gray-800" id="about">
         <div class="flex flex-wrap justify-between gap-18 p-20">
           <div>
             <h3 class="text-wrap mb-4 font-semibold">
