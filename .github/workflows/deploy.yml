@@ -20,10 +20,10 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 21                     # change to 22 if SFTP
-          protocol: ftp                 # change to 'sftp' if supported
-          local-dir: ./                 # root of your repo
-          server-dir: /domains/darkslategrey-goshawk-494819.hostingersite.com/public_html/     # change to your host’s web root
+          port: 21                     
+          protocol: ftp                 
+          local-dir: ./                 
+          server-dir: /domains/darkslategrey-goshawk-494819.hostingersite.com/public_html
           exclude: |
             **/.git*
             **/.github*
