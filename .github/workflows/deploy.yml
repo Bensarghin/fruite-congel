@@ -1,25 +1,29 @@
-name: Deploy via SSH
+name: Deploy to Shared Hosting
 
 on:
   push:
     branches:
-      - master
+      - master      # deploy whenever code is pushed to main branch
 
 jobs:
   deploy:
+    name: 📤 Deploy Website
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.9.0
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Deploy files to server
-        run: |
-          rsync -avz --delete \
-            ./ \
-            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/domains/darkslategrey-goshawk-494819.hostingersite.com/public_html/
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21                     # change to 22 if SFTP
+          protocol: ftp                 # change to 'sftp' if supported
+          local-dir: ./                 # root of your repo
+          server-dir: /home/u285755726/domains/darkslategrey-goshawk-494819.hostingersite.com/public_html/     # change to your host’s web root
+          exclude: |
+            **/.git*
+            **/.github*
