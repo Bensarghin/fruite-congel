@@ -38,8 +38,8 @@
   <body>
     <div id="app">
       <!-- header & navbar -->
-      <nav class="bg-[#f2f2f3] sticky top-0 z-50" id="header">
-        <div class="px-4 sm:px-6 lg:px-8">
+      <nav class="bg-[#f2f2f3] sticky top-0 z-50 mt-32" id="header">
+        <div class="px-4 sm:px-6 lg:px-8 relative">
           <div class="flex justify-between items-center h-32 relative">
             <!-- Left Menu Items -->
             <div class="hidden md:flex items-center space-x-8">
@@ -61,14 +61,14 @@
 
             <!-- Center Logo -->
             <div
-              class="flex-shrink-0 absolute left-1/2 transform -translate-x-1/2"
+              class="flex-shrink-0 absolute mb-8 h-96 lg:left-1/2 lg:transform lg:-translate-x-1/2"
             >
               <a
                 href="#hero-section"
                 @click.prevent="scrollToSection('hero-section')"
-                class="flex items-center"
+                class="m-0"
               >
-                <img src="./img/logo.svg" alt="" class="h-52" />
+                <img src="./img/logo.svg" alt="" class="h-76 object-cover" />
               </a>
             </div>
 
@@ -179,29 +179,29 @@
         </div>
       </nav>
       <!-- hero -->
-      <div class="bg-[#efefe1]" id="hero-section">
-        <div class="flex justify-center md:justify-end lg:me-16 lg:p-42 p-8">
+      <div class="bg-secondary" id="hero-section">
+        <div class="flex justify-center md:justify-end lg:me-16 lg:p-42 p-20">
           <div class="text-center font-medium inline-block uppercase">
             <div class="mb-8">
-              <p class="text-3xl text-primary font-bold mb-5">
+              <p class="text-2xl md:text-3xl text-primary font-bold mb-5">
                 Special <br />Anuga 2025
               </p>
-              <h1 class="hero-title text-7xl font-black text-primary mb-4">
+              <h1 class="hero-title text-white text-6xl md:text-7xl font-semibold md:text-primary mb-4">
                 das <br />dream<br />
                 team
               </h1>
             </div>
             <div class="mb-8">
-              <p class="text-2xl mb-3 text-primary font-bold">Visit us at</p>
-              <p class="text-5xl text-primary font-bold">
+              <p class="text-xl md:text-2xl  mb-3 text-primary font-bold">Visit us at</p>
+              <p class="text-3xl md:text-5xl text-primary font-bold">
                 HAll n° 4.1 <br />BOOTH C091
               </p>
             </div>
             <div>
-              <p class="text-primary mb-3 font-bold text-2xl">
+              <p class="text-xl md:text-2xl mb-3 text-primary font-bold">
                 04 - 08 <br />Oct 25
               </p>
-              <p class="text-5xl text-primary font-bold">
+              <p class="text-3xl md:text-5xl text-primary font-bold">
                 Koelnmesse <br />
                 Cologne
               </p>
@@ -212,20 +212,20 @@
       <!-- Content -->
       <main id="content" class="mt-42">
         <h2
-          class="content-title text-center font-medium mb-32 text-3xl md:text-5xl text-primary"
+          class="content-title text-center font-medium mb-32 text-3xl md:text-5xl text-[#fed025]"
         >
           Meet <br />
           our stars
         </h2>
         <!-- IQF Peppers -->
-        <div class="grid lg:grid-cols-2">
+        <div class="grid lg:grid-cols-2 justify-center text-center md:text-justify">
           <div class="">
             <img src="./img/1.jpg" alt="Blueberry" />
           </div>
           <div class="bg-[#efefe1] order-first lg:order-last">
             <div class="md:p-20 py-20 p-4 max-w-xl">
               <h3
-                class="fruit-name text-4xl mt-52 w-full text-bold mb-3 text-[#209746]"
+                class="fruit-name text-4xl w-full text-bold mb-3 text-[#209746]"
               >
                 IQF Peppers
               </h3>
@@ -240,7 +240,7 @@
         </div>
 
         <!-- IQF Mandarine -->
-        <div class="grid lg:grid-cols-2">
+        <div class="grid lg:grid-cols-2 justify-center text-center md:text-justify">
           <div class="bg-[#efefe1]">
             <div class="md:p-20 py-20 p-4 max-w-xl">
               <h3 class="fruit-name text-4xl text-bold mb-3 text-[#ef8322]">
@@ -251,7 +251,7 @@
                 and peeled then individually frozen to preserve their quality
                 and freshness!
               </p>
-              <a href="#" class="primary-btn mt-32"> Get your quote </a>
+              <a href="#" class="primary-btn mt-16"> Get your quote </a>
             </div>
           </div>
           <div class="">
@@ -260,7 +260,7 @@
         </div>
 
         <!-- IQF Blackberry -->
-        <div class="grid lg:grid-cols-2">
+        <div class="grid lg:grid-cols-2 justify-center text-center md:text-justify">
           <div class="">
             <img src="./img/2.jpg" alt="Blueberry" />
           </div>
@@ -273,12 +273,12 @@
                 Available as whole, handpicked, carefully sorted, then
                 individually frozen to preserve both freshness and flavor!
               </p>
-              <a href="#" class="primary-btn mt-32"> Get your quote </a>
+              <a href="#" class="primary-btn mt-16"> Get your quote </a>
             </div>
           </div>
         </div>
         <!-- IQF Blueberry -->
-        <div class="grid lg:grid-cols-2">
+        <div class="grid lg:grid-cols-2 justify-center text-center md:text-justify">
           <div class="bg-[#efefe1]">
             <div class="md:p-20 py-20 p-4 max-w-xl">
               <h3 class="fruit-name text-4xl text-bold mb-3 text-[#295f7f]">
@@ -289,7 +289,7 @@
                 like Ventura, Corrina, Stella, Eureka Sunrise, Cielo, and
                 Masena, each chosen for quality and freezing performance.
               </p>
-              <a href="#" class="primary-btn mt-32"> Get your quote </a>
+              <a href="#" class="primary-btn mt-16"> Get your quote </a>
             </div>
           </div>
           <div class="">
@@ -297,7 +297,7 @@
           </div>
         </div>
         <!-- IQF Raspberry -->
-        <div class="grid lg:grid-cols-2">
+        <div class="grid lg:grid-cols-2 justify-center text-center md:text-justify">
           <div class="">
             <img src="./img/3.jpg" alt="Raspberry" />
           </div>
@@ -312,13 +312,13 @@
                 Adelita, Jasmin, Maravilla, and Magestic ; each selected for
                 flavor, color, and optimal freezing performance.
               </p>
-              <a href="#" class="primary-btn mt-32"> Get your quote </a>
+              <a href="#" class="primary-btn mt-16"> Get your quote </a>
             </div>
           </div>
         </div>
       </main>
 
-      <div class="" id="about">
+      <div class="bg-[#f2f2f3]" id="about">
         <div class="mb-32 mt-42">
           <h1
             class="about-title text-secondary text-3xl md:text-5xl text-center font-medium my-42"
@@ -336,7 +336,7 @@
             SAME PASSION
           </h3>
         </div>
-        <div class="grid lg:grid-cols-2 items-center">
+        <div class="grid lg:grid-cols-2 items-center justify-center text-center md:text-justify">
           <div class="">
             <img src="./img/logo.svg" alt="Blueberry" />
           </div>
