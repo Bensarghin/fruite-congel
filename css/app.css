@@ -31,7 +31,8 @@ body {
   font-weight: 600; 
 }
 
-.about-title {
+.about-title,
+.about-subtitle {
     font-family: "Caprasimo", serif;
     font-weight: 300; 
 }
