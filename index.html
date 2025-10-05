@@ -35,24 +35,22 @@
       }
     </style>
   </head>
-  <body>
-    <div id="app">
+  <body class="relative">
+    <div id="app" class="relative">
       <!-- header & navbar -->
-      <nav class="bg-[#f2f2f3] mt-32" id="header">
-        <div class="px-4 sm:px-6 lg:px-8 relative">
-          <div class="flex justify-between items-center h-32 relative">
+      <nav class="bg-[#f2f2f3] mt-32 relative" id="header">
+        <div class="px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-32">
             <!-- Left Menu Items -->
-            <div class="hidden md:flex items-center space-x-8">
+            <div class="hidden relative z-50 md:flex items-center space-x-8">
               <a
                 href="#about"
-                @click.prevent="scrollToSection('about')"
                 class="text-primary uppercase font-semibold text-[14px] hover:text-secondary transition-colors duration-300"
               >
                 About Us
               </a>
               <a
-                href="#content"
-                @click.prevent="scrollToSection('content')"
+                href="#products"
                 class="text-primary uppercase font-semibold text-[14px] hover:text-secondary transition-colors duration-300"
               >
                 Products
@@ -61,13 +59,9 @@
 
             <!-- Center Logo -->
             <div
-              class="absolute inset-x-0 -top-46 flex justify-center mb-8 h-96"
+              class="absolute inset-x-0 z-0 -top-46 flex justify-center mb-8 h-96"
             >
-              <a
-                href="#hero-section"
-                @click.prevent="scrollToSection('hero-section')"
-                class="m-0"
-              >
+              <a href="#hero-section" class="m-0">
                 <img
                   src="./img/logo.svg"
                   alt="Logo"
@@ -77,10 +71,9 @@
             </div>
 
             <!-- Right Menu Items -->
-            <div class="hidden md:flex items-center space-x-8">
+            <div class="hidden relative z-50 md:flex items-center space-x-8">
               <a
                 href="#content"
-                @click.prevent="scrollToSection('content')"
                 class="text-primary uppercase font-semibold text-[14px] hover:text-secondary transition-colors duration-300"
               >
                 Process
@@ -159,7 +152,7 @@
                 About Us
               </a>
               <a
-                href="#content"
+                href="#products"
                 @click="toggleMobileMenu"
                 class="block px-4 py-4 text-primary uppercase font-semibold text-[16px] hover:bg-blue-50 hover:text-secondary rounded-md transition-colors duration-300 border-b border-gray-100"
               >
@@ -228,6 +221,7 @@
         <!-- IQF Peppers -->
         <div
           class="grid lg:grid-cols-2 justify-center text-center md:text-justify"
+          id="products"
         >
           <div class="">
             <img src="./img/1.jpg" alt="Peppers" />
@@ -374,7 +368,9 @@
                 Masrar Jalal, who brings over two decades of expertise in the
                 food industry
               </p>
-              <a href="#" class="primary-btn mt-8"> Get your quote </a>
+              <a href="#products" class="primary-btn mt-8">
+                Get your products
+              </a>
             </div>
           </div>
         </div>
@@ -390,7 +386,7 @@
               Join the Community <br />
               for Exclusive Deals and Offers
             </h3>
-            <a class="primary-btn" href="">Sign up now</a>
+            <a class="primary-btn" href="#" @click.prevent="togglePopup">Subscribe</a>
           </div>
           <div>
             <h3 class="text-wrap mb-4 font-semibold">
@@ -403,22 +399,6 @@
               Location Connect With US
             </h3>
             <div class="flex gap-4 justify-center text-center">
-              <!-- facebook -->
-
-              <a
-                class="bg-[#fed025] flex items-center justify-center rounded-full h-8 w-8"
-                href=""
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-4 h-4"
-                  viewBox="0 0 640 640"
-                >
-                  <path
-                    d="M240 363.3L240 576L356 576L356 363.3L442.5 363.3L460.5 265.5L356 265.5L356 230.9C356 179.2 376.3 159.4 428.7 159.4C445 159.4 458.1 159.8 465.7 160.6L465.7 71.9C451.4 68 416.4 64 396.2 64C289.3 64 240 114.5 240 223.4L240 265.5L174 265.5L174 363.3L240 363.3z"
-                  />
-                </svg>
-              </a>
               <!-- linkedin -->
 
               <a
@@ -455,19 +435,54 @@
           </div>
         </div>
       </footer>
+      <div
+        id="overlay"
+        class="fixed inset-0 bg-black opacity-40 backdrop-blur-sm z-40"
+        :class="isPopupDisplayed?'':'hidden'"
+      ></div>
+      <div
+        class="max-w-xl z-99 z-50 fixed top-1/2 left-1/2 -translate-1/2 shadow-2xl bg-[#efefe1] p-20 flex flex-col gap-4 text-center"
+        :class="isPopupDisplayed?'fixed':'hidden'"
+      >
+        <button
+        @click="togglePopup"
+          class="bg-gray-300 text-gray-500 text-3xl cursor-pointer rounded-full w-12 h-12 absolute top-8 right-8"
+        >
+          x
+        </button>
+        <h1 class="text-secondary text-4xl font-bold">Get our newsletter</h1>
+        <h4 class="text-primary text-2xl font-medium">
+          Join the Community for Exclusive Deals, Offers, Tips & More!
+        </h4>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="E-mail"
+          required
+          class="w-full border border-secondary rounded-2xl px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"
+        />
+        <button class="primary-btn text-white">Subscribe</button>
+        <a class="cursor-pointer" href="#" @click.prevent="togglePopup">No thanks</a>
+      </div>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
-      const { createApp, ref } = Vue;
+      const { createApp, ref, onMounted  } = Vue;
 
       createApp({
         setup() {
           const mobileMenuOpen = ref(false);
+          const isPopupDisplayed = ref(false);
 
           const toggleMobileMenu = () => {
             mobileMenuOpen.value = !mobileMenuOpen.value;
           };
+
+          const togglePopup = ()  => {
+            isPopupDisplayed.value = !isPopupDisplayed.value;
+          }
 
           const scrollToSection = (id) => {
             const headerHeight = document.getElementById("header").offsetHeight; // sticky header height
@@ -482,9 +497,15 @@
             }
           };
 
+          onMounted(() => {
+            togglePopup();
+          })
+
           return {
+            isPopupDisplayed,
             mobileMenuOpen,
             scrollToSection,
+            togglePopup,
             toggleMobileMenu,
           };
         },
