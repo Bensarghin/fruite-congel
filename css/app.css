@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+  scroll-behavior: smooth; /* fallback smooth scroll */
+}
+
 body {
     font-family: "Montserrat", sans-serif;
+    background-color: #f2f2f3;
 }
 
 .logo-text {
@@ -9,14 +14,11 @@ body {
     font-weight: 200;
 }
 
-
-
 #hero-section {
     background-image: url('/img/hero-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
 }
 
 #hero-section .hero-title {
@@ -27,6 +29,11 @@ body {
 .fruit-name {
   font-family: "Caprasimo", serif;
   font-weight: 600; 
+}
+
+.about-title {
+    font-family: "Caprasimo", serif;
+    font-weight: 300; 
 }
 
 @media screen and (max-width: 720px ) {

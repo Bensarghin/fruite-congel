@@ -6,9 +6,23 @@
     <title>Fruits Congel Du Nord</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="/css/app.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon-16x16.png"
+    />
     <link rel="manifest" href="/site.webmanifest" />
     <style type="text/tailwindcss">
       @theme {
@@ -17,26 +31,28 @@
       }
 
       .primary-btn {
-        @apply bg-[#fed025] inline-block rounded-2xl font-semibold text-[14px] py-2.5 px-4 capitalize;
+        @apply bg-[#fed025] inline-block rounded-4xl font-bold text-[16px] py-4 px-8 capitalize;
       }
     </style>
   </head>
   <body>
     <div id="app">
       <!-- header & navbar -->
-      <nav class="bg-[#f2f2f3] sticky top-0 z-50">
+      <nav class="bg-[#f2f2f3] sticky top-0 z-50" id="header">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between items-center h-32 relative">
             <!-- Left Menu Items -->
             <div class="hidden md:flex items-center space-x-8">
               <a
                 href="#about"
+                @click.prevent="scrollToSection('about')"
                 class="text-primary uppercase font-semibold text-[14px] hover:text-secondary transition-colors duration-300"
               >
                 About Us
               </a>
               <a
                 href="#content"
+                @click.prevent="scrollToSection('content')"
                 class="text-primary uppercase font-semibold text-[14px] hover:text-secondary transition-colors duration-300"
               >
                 Products
@@ -47,7 +63,11 @@
             <div
               class="flex-shrink-0 absolute left-1/2 transform -translate-x-1/2"
             >
-              <a href="#" class="flex items-center">
+              <a
+                href="#hero-section"
+                @click.prevent="scrollToSection('hero-section')"
+                class="flex items-center"
+              >
                 <img src="./img/logo.svg" alt="" class="h-52" />
               </a>
             </div>
@@ -55,7 +75,8 @@
             <!-- Right Menu Items -->
             <div class="hidden md:flex items-center space-x-8">
               <a
-                href="#process"
+                href="#content"
+                @click.prevent="scrollToSection('content')"
                 class="text-primary uppercase font-semibold text-[14px] hover:text-secondary transition-colors duration-300"
               >
                 Process
@@ -159,7 +180,7 @@
       </nav>
       <!-- hero -->
       <div class="bg-[#efefe1]" id="hero-section">
-        <div class="flex justify-center lg:justify-end lg:me-16 p-32">
+        <div class="flex justify-center lg:justify-end lg:me-16 p-42">
           <div class="text-center font-medium inline-block uppercase">
             <div class="mb-8">
               <p class="text-3xl text-primary font-bold mb-5">
@@ -196,7 +217,7 @@
             <img src="./img/1.jpg" alt="Blueberry" />
           </div>
           <div class="bg-[#efefe1] order-first lg:order-last">
-            <div class="p-20 max-w-xl mt-42">
+            <div class="p-20 max-w-xl">
               <h2
                 class="content-title text-center me-0 float-right mb-32 text-4xl text-primary"
               >
@@ -233,13 +254,13 @@
             </div>
           </div>
           <div class="">
-            <img src="./img/2.jpg" alt="Raspberry" />
+            <img src="./img/3.jpg" alt="Raspberry" />
           </div>
         </div>
         <!-- IQF Blueberry -->
         <div class="grid lg:grid-cols-2">
           <div class="">
-            <img src="./img/3.jpg" alt="Blueberry" />
+            <img src="./img/2.jpg" alt="Blueberry" />
           </div>
           <div class="bg-[#efefe1] order-first lg:order-last">
             <div class="p-20 max-w-xl">
@@ -270,13 +291,13 @@
             </div>
           </div>
           <div class="">
-            <img src="./img/4.jpg" alt="Blueberry" />
+            <img src="./img/5.jpg" alt="Blueberry" />
           </div>
         </div>
         <!-- IQF Mandarine -->
         <div class="grid lg:grid-cols-2">
           <div class="">
-            <img src="./img/5.jpg" alt="Blueberry" />
+            <img src="./img/4.jpg" alt="Blueberry" />
           </div>
           <div class="bg-[#efefe1] order-first lg:order-last">
             <div class="p-20 max-w-xl">
@@ -294,29 +315,51 @@
         </div>
       </main>
 
+      <div class="" id="about">
+        <div class="mb-32">
+          <img src="/img/about-cover.jpg" alt="" />
+        </div>
+        <div class="text-center">
+          <h3 class="text-primary text-4xl font-semibold">SAME COMMITMENT</h3>
+          <h3 class="text-secondary text-4xl font-semibold">SAME PASSION</h3>
+        </div>
+        <div class="grid lg:grid-cols-2 items-center">
+          <div class="">
+            <img src="./img/logo.svg" alt="Blueberry" />
+          </div>
+          <div class="order-first lg:order-last">
+            <div class="p-20 max-w-xl">
+              <h3 class="about-title text-5xl mb-8 text-secondary">
+                Who we are
+              </h3>
+              <p class="text-gray-800 font-medium">
+                Fruits Congel du Nord is a Moroccan, family-run business
+                specializing in the import and export of fresh and frozen
+                fruits. Headquartered in Larache, the company is led by CEO Mr.
+                Masrar Jalal, who brings over two decades of expertise in the
+                food industry
+              </p>
+              <a href="#" class="primary-btn mt-8"> Get your quote </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- footer  -->
-      <footer class="bg-[#f2f2f3] text-gray-800" id="about">
+      <footer class="bg-[#f2f2f3] text-gray-800">
         <div class="flex flex-wrap justify-between gap-18 p-20">
           <div>
             <h3 class="text-wrap mb-4 font-semibold">
               Join the Community <br />
               for Exclusive Deals and Offers
             </h3>
-            <a
-              class="primary-btn"
-              href=""
-              >Sign up now</a
-            >
+            <a class="primary-btn" href="">Sign up now</a>
           </div>
           <div>
             <h3 class="text-wrap mb-4 font-semibold">
               Terms & Conditions <br />Supply Chain Traceability
             </h3>
-            <a
-              class="primary-btn"
-              href=""
-              >Get your quote</a
-            >
+            <a class="primary-btn" href="">Get your quote</a>
           </div>
           <div>
             <h3 class="text-wrap mb-4 font-semibold">
@@ -389,8 +432,22 @@
             mobileMenuOpen.value = !mobileMenuOpen.value;
           };
 
+          const scrollToSection = (id) => {
+            const headerHeight = document.getElementById("header").offsetHeight; // sticky header height
+            const element = document.getElementById(id);
+
+            if (element) {
+              const offsetTop = element.offsetTop - headerHeight; // subtract header height
+              window.scrollTo({
+                top: offsetTop,
+                behavior: "smooth",
+              });
+            }
+          };
+
           return {
             mobileMenuOpen,
+            scrollToSection,
             toggleMobileMenu,
           };
         },
