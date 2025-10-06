@@ -238,7 +238,13 @@
                 Yellow, and Orange varieties, offered in all standard cuts
                 including strips and dices (6x6mm, 10x10mm, 20x20mm & more).
               </p>
-              <a href="#" class="primary-btn mt-16"> Get your quote </a>
+              <a
+                href="#"
+                @click.prevent="toggleQuote"
+                class="primary-btn mt-16"
+              >
+                Get your quote
+              </a>
             </div>
           </div>
         </div>
@@ -257,7 +263,13 @@
                 Adelita, Jasmin, Maravilla, and Magestic ; each selected for
                 flavor, color, and optimal freezing performance.
               </p>
-              <a href="#" class="primary-btn mt-16"> Get your quote </a>
+              <a
+                href="#"
+                @click.prevent="toggleQuote"
+                class="primary-btn mt-16"
+              >
+                Get your quote
+              </a>
             </div>
           </div>
           <div class="order-first lg:order-last">
@@ -281,7 +293,13 @@
                 Available as whole, handpicked, carefully sorted, then
                 individually frozen to preserve both freshness and flavor!
               </p>
-              <a href="#" class="primary-btn mt-16"> Get your quote </a>
+              <a
+                href="#"
+                @click.prevent="toggleQuote"
+                class="primary-btn mt-16"
+              >
+                Get your quote
+              </a>
             </div>
           </div>
         </div>
@@ -299,7 +317,13 @@
                 like Ventura, Corrina, Stella, Eureka Sunrise, Cielo, and
                 Masena, each chosen for quality and freezing performance.
               </p>
-              <a href="#" class="primary-btn mt-16"> Get your quote </a>
+              <a
+                href="#"
+                @click.prevent="toggleQuote"
+                class="primary-btn mt-16"
+              >
+                Get your quote
+              </a>
             </div>
           </div>
           <div class="order-first lg:order-last">
@@ -311,7 +335,7 @@
         <div
           class="grid lg:grid-cols-2 justify-center text-center md:text-justify"
         >
-          <div class="order-first lg:order-last">
+          <div class="">
             <img src="./img/4.jpg?v=2" alt="Mandarine" />
           </div>
           <div class="bg-[#efefe1]">
@@ -324,7 +348,13 @@
                 and peeled then individually frozen to preserve their quality
                 and freshness!
               </p>
-              <a href="#" class="primary-btn mt-16"> Get your quote </a>
+              <a
+                href="#"
+                @click.prevent="toggleQuote"
+                class="primary-btn mt-16"
+              >
+                Get your quote
+              </a>
             </div>
           </div>
         </div>
@@ -386,13 +416,20 @@
               Join the Community <br />
               for Exclusive Deals and Offers
             </h3>
-            <a class="primary-btn" href="#" @click.prevent="togglePopup">Subscribe</a>
+            <a class="primary-btn" href="#" @click.prevent="togglePopup"
+              >Subscribe</a
+            >
           </div>
           <div>
             <h3 class="text-wrap mb-4 font-semibold">
               Terms & Conditions <br />Supply Chain Traceability
             </h3>
-            <a class="primary-btn" href="">Bookmark</a>
+            <a
+              class="primary-btn"
+              href="https://maps.app.goo.gl/eUUAGPyL3euY6EPo8"
+              target="_blank"
+              >Bookmark</a
+            >
           </div>
           <div>
             <h3 class="text-wrap mb-4 font-semibold">
@@ -403,7 +440,8 @@
 
               <a
                 class="bg-[#fed025] flex items-center justify-center rounded-full h-8 w-8"
-                href=""
+                href="https://ma.linkedin.com/company/fruits-congel-du-nord"
+                target="_blank"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -438,51 +476,166 @@
       <div
         id="overlay"
         class="fixed inset-0 bg-black opacity-40 backdrop-blur-sm z-40"
-        :class="isPopupDisplayed?'':'hidden'"
+        :class="isPopupDisplayed || isQuoteDisplayed?'':'hidden'"
       ></div>
       <div
-        class="max-w-xl z-99 z-50 fixed top-1/2 left-1/2 -translate-1/2 shadow-2xl bg-[#efefe1] p-20 flex flex-col gap-4 text-center"
+        class="w-sm lg:w-xl z-99 z-50 fixed top-1/2 left-1/2 -translate-1/2 shadow-2xl bg-[#efefe1]"
         :class="isPopupDisplayed?'fixed':'hidden'"
       >
         <button
-        @click="togglePopup"
-          class="bg-gray-300 text-gray-500 text-3xl cursor-pointer rounded-full w-12 h-12 absolute top-8 right-8"
+          @click="togglePopup"
+          class="bg-gray-300 text-gray-500 text-3xl cursor-pointer rounded-full w-12 h-12 absolute top-4 right-4"
         >
           x
         </button>
-        <h1 class="text-secondary text-4xl font-bold">Get our newsletter</h1>
-        <h4 class="text-primary text-2xl font-medium">
-          Join the Community for Exclusive Deals, Offers, Tips & More!
-        </h4>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="E-mail"
-          required
-          class="w-full border border-secondary rounded-2xl px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"
-        />
-        <button class="primary-btn text-white">Subscribe</button>
-        <a class="cursor-pointer" href="#" @click.prevent="togglePopup">No thanks</a>
+        <div class="lg:p-20 p-6 flex flex-col gap-4 text-center">
+          <h1
+            class="text-secondary text-3xl lg:text-4xl font-bold lg:mt-8 mt-18"
+          >
+            Get our newsletter
+          </h1>
+          <h4 class="text-primary text-xl lg:text-2xl font-medium">
+            Join the Community for Exclusive Deals, Offers, Tips & More!
+          </h4>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="E-mail"
+            required
+            class="w-full border border-secondary rounded-2xl px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"
+          />
+          <button class="primary-btn text-white">Subscribe</button>
+          <a class="cursor-pointer mb-8" href="#" @click.prevent="togglePopup"
+            >No thanks</a
+          >
+        </div>
+      </div>
+      <div
+        class="fixed inset-0 z-50 overflow-y-auto"
+        :class="isQuoteDisplayed?'':'hidden'"
+      >
+        <div class="min-h-screen px-4 flex items-center justify-center">
+          <div class="w-sm lg:w-xl shadow-2xl bg-[#efefe1] p-8 my-8 relative">
+            <div class="flex flex-col gap-4 text-center">
+              <button
+                @click="toggleQuote"
+                class="bg-gray-300 text-gray-500 text-3xl cursor-pointer rounded-full w-12 h-12 absolute top-4 right-4"
+              >
+                x
+              </button>
+              <h1 class="text-primary text-4xl font-bold mt-10 mb-8">
+                Get your quotes
+              </h1>
+              <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                placeholder="First Name"
+                required
+                class="w-full border border-secondary rounded-2xl px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"
+              />
+              <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                placeholder="Last Name"
+                required
+                class="w-full border border-secondary rounded-2xl px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"
+              />
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="Phone Number"
+                required
+                class="w-full border border-secondary rounded-2xl px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-mail"
+                required
+                class="w-full border border-secondary rounded-2xl px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"
+              />
+              <input
+                type="text"
+                id="country"
+                name="country"
+                placeholder="Country"
+                required
+                class="w-full border border-secondary rounded-2xl px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"
+              />
+              <input
+                type="text"
+                id="product"
+                name="product"
+                placeholder="Product"
+                required
+                class="w-full border border-secondary rounded-2xl px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"
+              />
+              <input
+                type="text"
+                id="delivery_location"
+                name="delivery_location"
+                placeholder="Delivery Location"
+                required
+                class="w-full border border-secondary rounded-2xl px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"
+              />
+              <input
+                type="text"
+                id="delivery_date"
+                name="delivery_date"
+                placeholder="Desired Delivery Date"
+                required
+                class="w-full border border-secondary rounded-2xl px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"
+              />
+              <textarea
+                class="w-full border border-secondary rounded-2xl px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"
+                name="additional_requirements"
+                placeholder="Additional requirements"
+                id="additional_requirements"
+              ></textarea>
+              <textarea
+                name="message"
+                placeholder="Message"
+                id="message"
+                class="w-full border border-secondary rounded-2xl px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"
+              ></textarea>
+              <button class="primary-btn mb-8">Submit</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
-      const { createApp, ref, onMounted  } = Vue;
+      const { createApp, ref, onMounted } = Vue;
 
       createApp({
         setup() {
           const mobileMenuOpen = ref(false);
           const isPopupDisplayed = ref(false);
+          const isQuoteDisplayed = ref(false);
 
           const toggleMobileMenu = () => {
             mobileMenuOpen.value = !mobileMenuOpen.value;
           };
 
-          const togglePopup = ()  => {
+          const togglePopup = () => {
             isPopupDisplayed.value = !isPopupDisplayed.value;
-          }
+          };
+
+          const toggleQuote = () => {
+            isQuoteDisplayed.value = !isQuoteDisplayed.value;
+            if (isQuoteDisplayed.value) {
+              document.body.style.overflow = "hidden";
+            } else {
+              document.body.style.overflow = "auto";
+            }
+          };
 
           const scrollToSection = (id) => {
             const headerHeight = document.getElementById("header").offsetHeight; // sticky header height
@@ -499,11 +652,13 @@
 
           onMounted(() => {
             togglePopup();
-          })
+          });
 
           return {
             isPopupDisplayed,
+            isQuoteDisplayed,
             mobileMenuOpen,
+            toggleQuote,
             scrollToSection,
             togglePopup,
             toggleMobileMenu,
